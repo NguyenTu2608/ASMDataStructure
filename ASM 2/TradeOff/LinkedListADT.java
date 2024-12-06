@@ -1,5 +1,4 @@
 package TradeOff;
-
 class LinkedListADT {
     private static class Node {
         int data;
@@ -10,10 +9,7 @@ class LinkedListADT {
             this.next = null;
         }
     }
-
     private Node head;
-
-    // Thêm phần tử vào cuối danh sách
     public void append(int value) {
         Node newNode = new Node(value);
         if (head == null) {
@@ -27,7 +23,6 @@ class LinkedListADT {
         }
     }
 
-    // Xóa phần tử đầu tiên có giá trị cụ thể
     public void delete(int value) {
         if (head == null) return;
 
@@ -46,7 +41,6 @@ class LinkedListADT {
         }
     }
 
-    // Lấy phần tử tại chỉ số
     public int get(int index) {
         int counter = 0;
         Node current = head;
