@@ -21,6 +21,7 @@ public class SortAlgorithm {
             }
         }
     }
+
     public static void quickSortById(ArrayList<Student> students, int low, int high) {
         if (low < high) {
             int pi = partition(students, low, high);
@@ -30,7 +31,6 @@ public class SortAlgorithm {
             quickSortById(students, pi + 1, high);
         }
     }
-
     private static int partition(ArrayList<Student> students, int low, int high) {
         String pivot = students.get(high).getId(); // Pivot is the ID of the last student
         int i = low - 1;  // Index of the smaller element
@@ -45,7 +45,6 @@ public class SortAlgorithm {
                 students.set(j, temp);
             }
         }
-
         // Swap the pivot element (students[high]) with students[i + 1]
         Student temp = students.get(i + 1);
         students.set(i + 1, students.get(high));
